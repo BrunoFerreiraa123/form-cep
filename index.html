@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="post">
+
+        <div class="form-name">
+            <label for="name"></label>
+            <input type="text" id="name" class="name" placeholder="Nome">
+            <label for="name"></label>
+            <input type="text" id="last-name" class="last-name" placeholder="Sobrenome">
+        </div>
+
+        <div class="form-adress">
+            <div class="cep">
+                <label for="cep"></label>
+                <input type="text" id="cep" class="cep" placeholder="Digíte seu CEP">
+            </div>
+
+            <label for="uf"></label>
+            <input type="text" id="uf" class="estado" placeholder="Estado">
+
+            <label for="city"></label>
+            <input type="text" id="city" class="cidade" placeholder="Cidade">
+
+            <label for="street"></label>
+            <input type="text" id="street" class="rua" placeholder="Rua">
+        </div>
+
+        <div class="button">
+            <input type="submit" value="CADASTRAR">
+        </div>
+
+    </form>
+
+</body>
+<script src="index.js"></script>
+
+</html>
