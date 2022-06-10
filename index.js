@@ -1,4 +1,4 @@
-import checkName from './modules/regexInputs.js';
+import {checkName, checkCep} from './modules/regexInputs.js';
 
 const submit = document.getElementById('button');
 
@@ -10,10 +10,8 @@ submit.addEventListener('click', evt => {
 
 function checkForm () {
 
-    if (checkName()) {
-        return console.log('ok')
-    } else {
-        return console.log('error name')
-    }
+    if (checkName() === false) return errorName;
+    if (checkName() === false) return errorCep;
+    
 
 }
