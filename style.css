@@ -38,7 +38,6 @@ form {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 30px auto;
-    row-gap: 20px
 }
 
 .form-button {
@@ -53,9 +52,8 @@ input.name{
 input.cep, input.uf, input.city, input.street {
     width: 49%;
 }
-input.cep {
-    margin-right: 6px;
-}
+input.cep, input.uf {margin-bottom: 20px;}
+input.cep {margin-right: 6px;}
 
 input.button {
     width: 150px;
@@ -65,6 +63,11 @@ input.button {
     color: rgb(42, 42, 42);
     border: 0;
     font-weight: bold;
+}
+
+.form-name > label#name, label#cep{
+    width: 100%;
+    padding-bottom:25px
 }
 
 @media screen and (max-width:768px) {
