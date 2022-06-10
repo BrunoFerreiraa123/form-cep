@@ -10,8 +10,7 @@ submit.addEventListener('click', evt => {
 
 function checkForm () {
 
-    if (checkName() === false) return errorName;
-    if (checkName() === false) return errorCep;
+    
     
 
 }
