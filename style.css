@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 249, 236);
+    background-color: rgb(255, 237, 218);
 }
 
 form {
@@ -47,6 +47,7 @@ form {
 
 input.name{
     width: 100%;
+    margin-top: 5px;
 }
 
 input.cep, input.uf, input.city, input.street {
@@ -65,9 +66,14 @@ input.button {
     font-weight: bold;
 }
 
-.form-name > label#name, label#cep{
+#label-name, #label-cep{
     width: 100%;
-    padding-bottom:25px
+} 
+
+#paragraph-name, #paragraph-cep{
+    color: red;
+    font-size: 18px;
+    padding-bottom: 5px;
 }
 
 @media screen and (max-width:768px) {
