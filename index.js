@@ -1,16 +1,21 @@
-import {checkName, checkCep} from './modules/regexInputs.js';
-import {clearMsgError} from './modules/printError.js'
+import { checkName, checkCep } from './modules/regexInputs.js';
+import { clearMsgError } from './modules/printError.js';
+import pesquisaCep from './modules/validateCep.js';
 
-const submit = document.getElementById('button');
 
-submit.addEventListener('click', evt => {
-    evt.preventDefault();
-    clearMsgError()
+document.getElementById('button')
+    .addEventListener('click', evt => {
+        evt.preventDefault();
+        clearMsgError()
 
-    checkForm()
-})
+        checkForm()
+    })
 
-function checkForm () {
+function checkForm() {
+    
     checkName();
-    checkCep();
+
+    if (checkCep()) {
+        pesquisaCep();
+    }
 }
