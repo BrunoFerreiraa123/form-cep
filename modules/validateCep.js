@@ -1,12 +1,12 @@
 import { errorCep, clearMsgError } from './printError.js'
 
-const preencherFormulario = (endereco) => {
+const fillForm = (endereco) => {
     document.getElementById('street').value = endereco.logradouro;
     document.getElementById('city').value = endereco.localidade;
     document.getElementById('uf').value = endereco.uf;
 }
 
-const pesquisaCep = async () => {
+const searchCep = async () => {
     clearMsgError();
     const cep = document.getElementById('cep').value;
     const url = `http://viacep.com.br/ws/${cep}/json/`;
@@ -17,11 +17,11 @@ const pesquisaCep = async () => {
     if (endereco.hasOwnProperty('erro')) {
         errorCep();
     } else {
-        preencherFormulario(endereco)
+        fillForm(endereco)
     }
 }
 
 document.getElementById('cep')
-    .addEventListener("focusout", pesquisaCep);
+    .addEventListener("focusout", searchCep);
 
-export default pesquisaCep;
+export default searchCep;
