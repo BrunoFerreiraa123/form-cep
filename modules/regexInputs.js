@@ -24,7 +24,7 @@ function checkCep() {
     if (condicional === false) {
         errorCep()
     }else {
-        return true;
+        return
     };
 }
 
