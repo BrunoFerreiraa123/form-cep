@@ -21,11 +21,7 @@ function checkCep() {
 
     condicional = cepValue.match(reg) !== null ? true : false;
 
-    if (condicional === false) {
-        errorCep()
-    }else {
-        return
-    };
+    if (condicional === false) errorCep();
 }
 
 
