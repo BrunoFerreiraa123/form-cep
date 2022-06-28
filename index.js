@@ -9,7 +9,7 @@ document.getElementById('button')
 
         checkForm()
     })
-//teste absoluto
+
 function checkForm() {
     
     checkName();
