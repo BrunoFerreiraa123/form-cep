@@ -1,20 +1,27 @@
 import { checkName, checkCep } from './modules/regexInputs.js';
+import { errorName, errorCep } from './modules/printError.js';
 import { clearMsgError } from './modules/printError.js';
-import searchCep from './modules/validateCep.js';
 
-document.getElementById('button')
-    .addEventListener('click', evt => {
-        evt.preventDefault();
-        clearMsgError()
+const button = document.getElementById('button');
+const form = document.getElementById('form');
 
-        checkForm()
-    })
+button.addEventListener('click', e => {
+    e.preventDefault();
+
+    clearMsgError()
+    if(checkForm()){
+        form.submit();
+        alert("Formulário Enviado com sucesso! :D")
+    }
+})
 
 function checkForm() {
     
-    checkName();
-
-    if (checkCep()) {
-        searchCep();
+    if (checkName() === false) {
+        errorName()
+    } else if (checkCep() === false) {
+        errorCep()
     }
+    return (checkName() === true && checkCep() === true) ? true : false;
+        
 }
