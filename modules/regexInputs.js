@@ -1,4 +1,4 @@
-import {errorName, errorCep} from './printError.js';
+import searchCep from './validateCep.js';
 
 const name = document.getElementById('name');
 const cep = document.getElementById('cep');
@@ -12,7 +12,7 @@ function checkName() {
     condicional = nameValue.match(reg) !== null ? true : false;
     //o metodo match retorna null caso o valor do input contenha algum caracter fora da regexp 
 
-    if (condicional === false) errorName();
+    return (condicional === true) ? true : false;
 }
 
 function checkCep() {
@@ -21,7 +21,9 @@ function checkCep() {
 
     condicional = cepValue.match(reg) !== null ? true : false;
 
-    if (condicional === false) errorCep();
+    if(condicional === true) searchCep();
+
+    return (condicional === true) ? true : false;
 }
 
 
