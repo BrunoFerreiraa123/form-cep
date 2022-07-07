@@ -1,6 +1,5 @@
-import { checkName, checkCep } from './modules/regexInputs.js';
-import { errorName, errorCep } from './modules/printError.js';
-import { clearMsgError } from './modules/printError.js';
+import checkCep from './modules/regexInputs.js';
+import { errorCep, clearMsgError } from './modules/printError.js';
 
 const button = document.getElementById('button');
 const form = document.getElementById('form');
@@ -17,11 +16,9 @@ button.addEventListener('click', e => {
 
 function checkForm() {
     
-    if (checkName() === false) {
-        errorName()
-    } else if (checkCep() === false) {
+    if (checkCep() === false) {
         errorCep()
     }
-    return (checkName() === true && checkCep() === true) ? true : false;
+    return (checkCep() === true) ? true : false;
         
 }
