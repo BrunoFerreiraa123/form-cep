@@ -7,30 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <form id="form">
 
-        <div class="form-adress">
+        <div class="row">
+            <label for="cep" id="label-cep">
+                <p id="paragraph-cep"></p>
+            </label>
+            <input type="text" id="cep" class="cep" placeholder="Digíte seu CEP">
 
-                <label for="cep" id="label-cep"><p id="paragraph-cep"></p></label>
-                
-                <input type="text" id="cep" class="cep" placeholder="Digíte seu CEP">
-
-                <label for="street"></label>
-                <input type="text" id="street" class="street" placeholder="Rua" disabled>
-                
-                <label for="city"></label>
-                <input type="text" id="city" class="city" placeholder="Cidade" disabled>
-
-                <label for="uf"></label>
-                <input type="text" id="uf" class="uf" placeholder="Estado" disabled>
-
+            <label for="street"></label>
+            <input type="text" id="street" class="street" placeholder="Rua" disabled>
         </div>
 
-        <div class="form-button">
+        <div class="row">
+            <label for="city"></label>
+            <input type="text" id="city" class="city" placeholder="Cidade" disabled>
+
+            <label for="district"></label>
+            <input type="text" id="district" class="district" placeholder="Bairro" disabled>
+        </div>
+
+        <div class="row">
+            <label for="num"></label>
+            <input type="text" id="num" class="num" placeholder="Número" required>
+
+            <label for="uf"></label>
+            <input type="text" id="uf" class="uf" placeholder="Estado" disabled>
+        </div>
+
+        <div class="row">
             <input type="submit" class="button" id="button" value="CADASTRAR">
         </div>
 
@@ -38,4 +51,5 @@
 
 </body>
 <script src="index.js" type="module"></script>
+
 </html>
