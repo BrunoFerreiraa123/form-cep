@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'roboto';
+    font-family: 'Poppins', 'Roboto';
 }
 
 * input {
@@ -10,8 +10,8 @@
     outline: none;
     padding-left: 10px;
     border-radius: 5px;
-    height: 40px;
-    font-size: 1em;
+    height: 50px;
+    font-size: 1.0em;
 }
 
 body {
@@ -24,37 +24,26 @@ body {
 }
 
 form {
+    width: 50%;
     max-width: 1000px;
-}
-
-.form-name {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.form-adress {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 30px auto;
-}
-
-.form-button {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-input.name{
-    width: 100%;
-    margin-top: 5px;
+div.row {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    margin: 20px auto;
 }
 
-input.cep, input.uf, input.city, input.street {
-    width: 49%;
+input.cep, input.uf, input.city,
+input.street, input.district, input.num {
+    width: 45%;
 }
-input.cep, input.uf {margin-bottom: 20px;}
-input.cep {margin-right: 6px;}
 
 input.button {
     width: 150px;
@@ -65,10 +54,6 @@ input.button {
     border: 0;
     font-weight: bold;
 }
-
-#label-name, #label-cep{
-    width: 100%;
-} 
 
 #paragraph-name, #paragraph-cep{
     color: red;
