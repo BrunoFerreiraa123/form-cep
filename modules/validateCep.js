@@ -3,6 +3,7 @@ import { errorCep, clearMsgError } from './printError.js'
 const fillForm = (endereco) => {
     document.getElementById('street').value = endereco.logradouro;
     document.getElementById('city').value = endereco.localidade;
+    document.getElementById('district').value = endereco.bairro;
     document.getElementById('uf').value = endereco.uf;
 }
 
