@@ -5,13 +5,10 @@
     font-family: 'Poppins', 'Roboto';
 }
 
-* input {
-    border: 1px solid rgb(255, 94, 0);
-    outline: none;
-    padding-left: 10px;
-    border-radius: 5px;
-    height: 50px;
-    font-size: 1.0em;
+
+* label {
+    transition: .5s;
+    cursor: text;
 }
 
 body {
@@ -32,34 +29,58 @@ form {
 }
 
 div.row {
-    width: 70%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    column-gap: 5px;
-    margin: 20px auto;
+    margin: 15px 0;
 }
 
-input.cep, input.uf, input.city,
-input.street, input.district, input.num {
-    width: 45%;
+div.row:last-of-type {
+    justify-content: center;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    height: 70px;
+    width: 48%;
+}
+
+.input-box input {
+    background: rgb(255, 94, 0);
+    border:0;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height:8px;
+    font-size: 1.0em;
+    transition: .5s;
 }
 
 input.button {
     width: 150px;
     height: 40px;
     padding-left: 0;
+    display: flex;
+    justify-content: center;
     background-color: rgb(255, 94, 0);
     color: rgb(42, 42, 42);
     border: 0;
     font-weight: bold;
 }
 
-#paragraph-name, #paragraph-cep{
+.input-box input:focus,
+.input-box input:valid{
+    height:100%;
+}
+
+/* #paragraph-name, #paragraph-cep{
     color: red;
     font-size: 18px;
     padding-bottom: 5px;
-}
+} */
 
 @media screen and (max-width:768px) {
     .form-name {
