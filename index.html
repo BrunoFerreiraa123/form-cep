@@ -18,29 +18,40 @@
     <form id="form">
 
         <div class="row">
-            <label for="cep" id="label-cep">
-                <p id="paragraph-cep"></p>
-            </label>
-            <input type="text" id="cep" class="cep" placeholder="Digíte seu CEP">
+            <div class="input-box">
+                <input type="text" id="cep" class="cep" required>
+                <label for="cep" id="label-cep"><p id="paragraph-cep"></p>Digíte seu CEP</label>
+            </div>
 
-            <label for="street"></label>
-            <input type="text" id="street" class="street" placeholder="Rua" disabled>
+
+            <div class="input-box">
+                <input type="text" id="street" class="street" required>
+                <label for="street">Rua</label>
+            </div>
         </div>
 
         <div class="row">
-            <label for="city"></label>
-            <input type="text" id="city" class="city" placeholder="Cidade" disabled>
+            <div class="input-box">
+                <input type="text" id="city" class="city" required>
+                <label for="city">Cidade</label>
+            </div>
 
-            <label for="district"></label>
-            <input type="text" id="district" class="district" placeholder="Bairro" disabled>
+            <div class="input-box">
+                <input type="text" id="district" class="district" required>
+                <label for="district">Bairro</label>
+            </div>
         </div>
 
         <div class="row">
-            <label for="num"></label>
-            <input type="text" id="num" class="num" placeholder="Número" required>
+            <div class="input-box">
+                <input type="text" id="num" class="num" required>
+                <label for="num">Número</label>
+            </div>
 
-            <label for="uf"></label>
-            <input type="text" id="uf" class="uf" placeholder="Estado" disabled>
+            <div class="input-box">
+                <input type="text" id="uf" class="uf" required>
+                <label for="uf">Estado</label>
+            </div>
         </div>
 
         <div class="row">
