@@ -1,6 +1,8 @@
 import searchCep from './validateCep.js';
 
 const cep = document.getElementById('cep');
+const num = document.getElementById('num');
+
 
 let condicional = Boolean;
 
@@ -15,5 +17,11 @@ function checkCep() {
     return (condicional === true) ? true : false;
 }
 
+function checkNum() {
+    let condicional = (num.value.length <= 0) ? false : true;
 
-export default checkCep
+    return (condicional === false) ? false : true;
+}
+
+
+export { checkCep, checkNum }
