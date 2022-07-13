@@ -9,7 +9,8 @@ const fillForm = (endereco) => {
 
 const searchCep = async () => {
     clearMsgCep();
-    const cep = document.getElementById('cep').value;
+    let cep = document.getElementById('cep').value;
+    cep = cep.replace(/ /g, "");
     const url = `https://viacep.com.br/ws/${cep}/json/`;
 
     const dados = await fetch(url);
