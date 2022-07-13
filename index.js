@@ -1,25 +1,23 @@
-import { checkCep, checkNum } from './modules/regexInputs.js';
-import { errorCep, errorNum, clearMsgError } from './modules/printError.js';
+import { checkCep, checkNum } from './modules/validateInputs.js';
+import { errorCep, errorNum, clearMsgCep, clearMsgNum } from './modules/printError.js';
 
 const button = document.getElementById('button');
 const form = document.getElementById('form');
 
 button.addEventListener('click', e => {
     e.preventDefault();
+    clearMsgCep();
+    clearMsgNum();
 
-    clearMsgError()
-    if(checkForm() === true && checkNum() === true){
+    if (checkForm()) {
         form.submit();
         alert("Formulário Enviado com sucesso! :D")
     }
 })
 
 function checkForm() {
-    if (checkCep() === false) {
-        errorCep()
-    }
-    if(checkNum() === false) {
-        errorNum() 
-    }
-    return (checkCep() === true) ? true : false;      
+    if (!checkCep()) { errorCep() }
+    if (!checkNum()) { errorNum() }
+
+    return ( checkCep() && checkNum() ) ? true : false;
 }
