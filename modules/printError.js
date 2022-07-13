@@ -9,8 +9,12 @@ function errorNum() {
     msgNum.innerText += "Insira o número"
 }
 
-function clearMsgError() {
+function clearMsgCep() {
     msgCep.innerText = "";
 }
 
-export { errorCep, errorNum,  clearMsgError }
+function clearMsgNum() {
+    msgNum.innerText = "";
+}
+
+export { errorCep, errorNum, clearMsgCep, clearMsgNum }
